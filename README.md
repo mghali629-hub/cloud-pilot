@@ -1,11 +1,11 @@
-﻿# ☁️ CloudPilot — Kubernetes Orchestration & FinOps Platform
+﻿# ☁️ CloudPilot — Cloud Infrastructure & DevOps Observability Dashboard
 
-Enterprise Kubernetes cluster automation, automated cost optimization dashboard, GitOps deployment pipeline tracking, and system health status monitoring.
+Next-gen cloud infrastructure monitoring & DevOps dashboard for real-time telemetry, server management, and incident response.
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 - **Framework**: Next.js 14 (App Router)
 - **Language**: TypeScript & React 18
-- **Styling**: TailwindCSS
+- **Styling**: TailwindCSS & Lucide Icons
 - **Database**: Prisma ORM & SQLite
 
 ## 🚀 Quick Start
@@ -14,6 +14,7 @@ npm install
 npx prisma db push
 npm run db:seed
 npm run dev
-``n
+`
+
 ## 📄 License
 MIT License.
