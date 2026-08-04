@@ -1,0 +1,65 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model DemoRequest {
+  id        Int      @id @default(autoincrement())
+  email     String
+  company   String
+  details   String?
+  createdAt DateTime @default(now())
+}
+
+model BlogPost {
+  id        Int      @id @default(autoincrement())
+  slug      String   @unique
+  title     String
+  author    String
+  role      String
+  date      String
+  readTime  String
+  image     String
+  content   String
+}
+
+model Cluster {
+  id        Int      @id @default(autoincrement())
+  name      String
+  provider  String
+  region    String
+  status    String   @default("HEALTHY")
+  nodes     Int
+  cpuUsage  Float
+  memUsage  Float
+  createdAt DateTime @default(now())
+}
+
+model Deployment {
+  id        Int      @id @default(autoincrement())
+  name      String
+  image     String
+  replicas  Int
+  status    String   @default("RUNNING")
+  createdAt DateTime @default(now())
+}
+
+model Integration {
+  id        Int      @id @default(autoincrement())
+  name      String
+  provider  String
+  status    String   @default("CONNECTED")
+}
+
+model SupportTicket {
+  id        Int      @id @default(autoincrement())
+  email     String
+  subject   String
+  body      String
+  status    String   @default("OPEN")
+  createdAt DateTime @default(now())
+}
